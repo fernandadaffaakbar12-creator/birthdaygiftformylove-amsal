@@ -570,25 +570,21 @@ body {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
-/* Jarak Orbit DIPERBESAR (TranslateZ) agar kartu tidak berdempetan */
+/* Jarak Orbit 4 kartu (TranslateZ 230px) agar berdekatan namun tidak terlalu rapat */
 .item1 {
-    transform: rotateY(0deg) translateZ(340px);
+    transform: rotateY(0deg) translateZ(230px);
 }
 
 .item2 {
-    transform: rotateY(72deg) translateZ(340px);
+    transform: rotateY(90deg) translateZ(230px);
 }
 
 .item3 {
-    transform: rotateY(144deg) translateZ(340px);
+    transform: rotateY(180deg) translateZ(230px);
 }
 
 .item4 {
-    transform: rotateY(216deg) translateZ(340px);
-}
-
-.item5 {
-    transform: rotateY(288deg) translateZ(340px);
+    transform: rotateY(270deg) translateZ(230px);
 }
 
 /* =========================================
@@ -622,6 +618,7 @@ body {
 #modal-img {
     max-width: 90vw;
     max-height: 75vh;
+    object-fit: cover;
     border-radius: 15px;
     box-shadow: 0 10px 50px rgba(255, 182, 193, 0.5);
     transform: scale(0.7);
@@ -966,7 +963,8 @@ body {
 
 #modal-img {
     max-width: 90vw;
-    max-height: 90vh;
+    max-height: 75vh;
+    object-fit: cover;
     border-radius: 15px;
     box-shadow: 0 10px 50px rgba(255, 182, 193, 0.5);
     transform: scale(0.7);
@@ -1127,25 +1125,21 @@ body {
         font-size: 0.95rem;
     }
 
-    /* Menyesuaikan jarak orbit di HP */
+    /* Menyesuaikan jarak orbit 4 kartu di HP */
     .item1 {
-        transform: rotateY(0deg) translateZ(200px);
+        transform: rotateY(0deg) translateZ(170px);
     }
 
     .item2 {
-        transform: rotateY(72deg) translateZ(200px);
+        transform: rotateY(90deg) translateZ(170px);
     }
 
     .item3 {
-        transform: rotateY(144deg) translateZ(200px);
+        transform: rotateY(180deg) translateZ(170px);
     }
 
     .item4 {
-        transform: rotateY(216deg) translateZ(200px);
-    }
-
-    .item5 {
-        transform: rotateY(288deg) translateZ(200px);
+        transform: rotateY(270deg) translateZ(170px);
     }
 
     #main-content {
@@ -1655,12 +1649,18 @@ body {
     text-align: center;
 }
 
-/* Pesan di atas kue */
+/* Pesan di atas kue - Tema Cokelat Susu */
 .candle-message {
     font-family: 'Caveat', cursive;
-    font-size: 1.6rem;
-    color: #ffb6c1;
-    text-shadow: 0 0 15px rgba(255, 182, 193, 0.5);
+    font-size: 1.7rem;
+    color: #543310;
+    background: rgba(255, 250, 245, 0.88);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(188, 140, 100, 0.45);
+    border-radius: 20px;
+    padding: 10px 22px;
+    box-shadow: 0 4px 15px rgba(110, 65, 30, 0.15);
     margin-bottom: 30px;
     min-height: 60px;
     opacity: 0;
@@ -1676,7 +1676,7 @@ body {
 }
 
 /* =========================================
-   BIRTHDAY CAKE (CSS Art)
+   BIRTHDAY CAKE (CSS Art) - TEMA COKELAT SUSU
 ========================================= */
 .cake-container {
     display: flex;
@@ -1710,7 +1710,7 @@ body {
 .candle-body {
     width: 12px;
     height: 50px;
-    background: linear-gradient(180deg, #ff9ecf, #e876a8);
+    background: linear-gradient(180deg, #f5e6d3, #a87242);
     border-radius: 2px 2px 0 0;
     position: relative;
     box-shadow: inset -2px 0 4px rgba(0,0,0,0.15);
@@ -1760,24 +1760,24 @@ body {
     line-height: 1;
     position: relative;
     z-index: 1;
-    /* Wax gradient effect */
+    /* Wax gradient effect - Nuansa Cokelat Susu & Karamel */
     background: linear-gradient(
         180deg,
-        #ffcce0 0%,
-        #ffb6d3 15%,
-        #ff9ecf 30%,
-        #e876a8 55%,
-        #d65d8c 75%,
-        #c44e7d 100%
+        #fff4e6 0%,
+        #edd4b8 15%,
+        #d4a373 30%,
+        #b0784a 55%,
+        #8a562c 75%,
+        #633814 100%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     /* 3D wax-like depth with paint-order trick */
     paint-order: stroke fill;
-    -webkit-text-stroke: 3px rgba(200, 80, 130, 0.5);
+    -webkit-text-stroke: 3px rgba(115, 67, 30, 0.45);
     filter: drop-shadow(1px 2px 1px rgba(0,0,0,0.35))
-            drop-shadow(-1px 0px 1px rgba(255,255,255,0.15))
+            drop-shadow(-1px 0px 1px rgba(255,255,255,0.25))
             drop-shadow(0 4px 8px rgba(0,0,0,0.25));
 }
 
@@ -1785,7 +1785,7 @@ body {
 
 /* Efek glow di sekitar lilin angka */
 .number-candle {
-    filter: drop-shadow(0 0 12px rgba(255, 160, 200, 0.35));
+    filter: drop-shadow(0 0 12px rgba(212, 163, 115, 0.4));
 }
 
 /* Highlight sinar di atas angka */
@@ -1897,43 +1897,65 @@ body {
     100% { opacity: 0; transform: translateX(-50%) translateY(-30px); }
 }
 
-/* KUE */
+/* KUE - Tema Cokelat Susu */
 .cake {
     position: relative;
     width: 200px;
 }
 
+/* Lapisan Atas - Lelehan Ganache Cokelat Susu */
 .cake-top {
     width: 200px;
     height: 18px;
-    background: linear-gradient(180deg, #ffb6c1, #ff8fa3);
+    background: linear-gradient(180deg, #c58f62, #9c663b);
     border-radius: 8px 8px 0 0;
     position: relative;
     z-index: 1;
-    box-shadow: 0 -2px 8px rgba(255, 182, 193, 0.3);
+    box-shadow: 0 -2px 8px rgba(138, 86, 44, 0.35), inset 0 2px 3px rgba(255, 255, 255, 0.4);
 }
 
+/* Lapisan Tengah - Bolu Sponge Cokelat Susu & Isian Krim Susu */
 .cake-middle {
     width: 200px;
     height: 55px;
-    background: linear-gradient(180deg, #f8e0e6, #f0c8d0);
+    background: linear-gradient(
+        180deg,
+        #a67347 0%,
+        #8d5a31 34%,
+        #fffdf9 37%,
+        #f8eee2 50%,
+        #fffdf9 63%,
+        #8d5a31 66%,
+        #774722 100%
+    );
     position: relative;
-    border-left: 3px solid rgba(255,255,255,0.1);
-    border-right: 3px solid rgba(0,0,0,0.05);
+    border-left: 3px solid rgba(255, 255, 255, 0.6);
+    border-right: 3px solid rgba(85, 45, 18, 0.35);
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.6);
 }
 
+/* Lapisan Bawah - Sponge Cokelat Pekat & Cream Mewah */
 .cake-bottom {
     width: 200px;
     height: 55px;
-    background: linear-gradient(180deg, #e8a0b0, #d68898);
+    background: linear-gradient(
+        180deg,
+        #8a562c 0%,
+        #73431d 34%,
+        #fffdf9 37%,
+        #f6ead9 50%,
+        #fffdf9 63%,
+        #73431d 66%,
+        #5a3112 100%
+    );
     border-radius: 0 0 8px 8px;
     position: relative;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    border-left: 3px solid rgba(255,255,255,0.1);
-    border-right: 3px solid rgba(0,0,0,0.05);
+    box-shadow: 0 8px 25px rgba(85, 45, 18, 0.45), 0 4px 10px rgba(0, 0, 0, 0.28);
+    border-left: 3px solid rgba(255, 255, 255, 0.55);
+    border-right: 3px solid rgba(60, 30, 10, 0.45);
 }
 
-/* Frosting drips */
+/* Frosting drips - Lelehan Krim Susu Segar & Lelehan Cokelat Susu */
 .cake-frosting {
     position: absolute;
     top: 15px;
@@ -1948,13 +1970,16 @@ body {
     display: block;
     width: 16px;
     height: 22px;
-    background: linear-gradient(180deg, #ffb6c1, #ff9eaf);
+    background: linear-gradient(180deg, #fffdf8, #f5ebd9);
     border-radius: 0 0 50% 50%;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
     animation: frostDrip 3s ease-in-out infinite alternate;
 }
 
 .cake-frosting span:nth-child(even) {
     height: 28px;
+    background: linear-gradient(180deg, #9c663b, #73431d);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
     animation-delay: 0.5s;
 }
 
@@ -1972,20 +1997,28 @@ body {
     display: flex;
     justify-content: space-around;
     padding: 0 10px;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
 }
 
-/* Glow di sekitar kue */
+.cake-decoration span {
+    filter: drop-shadow(0 2px 4px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 8px rgba(188, 125, 70, 0.6));
+    transform: scale(1.1);
+    display: inline-block;
+}
+
+/* Piring Kue Keramik Susu Mewah dengan Bayangan Cokelat Lembut */
 .cake-container::after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: -12px;
     left: 50%;
     transform: translateX(-50%);
-    width: 250px;
-    height: 60px;
-    background: radial-gradient(ellipse, rgba(255, 182, 193, 0.15), transparent 70%);
+    width: 260px;
+    height: 24px;
+    background: linear-gradient(180deg, #ffffff 0%, #faf3eb 50%, #eadccb 100%);
     border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(105, 60, 25, 0.35), 0 2px 10px rgba(0, 0, 0, 0.18), inset 0 2px 4px rgba(255, 255, 255, 0.95);
+    border: 2px solid rgba(255, 255, 255, 0.95);
     z-index: 0;
 }
 
@@ -1998,19 +2031,19 @@ body {
     padding: 14px 36px;
     font-family: 'Caveat', cursive;
     font-size: 1.4rem;
-    color: #fff;
-    background: linear-gradient(135deg, #6c5ce7, #a55eea, #ff6b81);
-    border: 2px solid rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    background: linear-gradient(135deg, #d4a373, #a06840, #6f432a);
+    border: 2px solid rgba(255, 255, 255, 0.85);
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.4s ease;
-    box-shadow: 0 4px 20px rgba(108, 92, 231, 0.4);
+    box-shadow: 0 4px 20px rgba(160, 104, 64, 0.45), 0 0 25px rgba(255, 255, 255, 0.3);
     animation: tiupBtnGlow 2s ease-in-out infinite;
 }
 
 .btn-mulai-tiup:hover {
     transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 8px 30px rgba(108, 92, 231, 0.6);
+    box-shadow: 0 8px 30px rgba(111, 67, 42, 0.65), 0 0 40px rgba(255, 255, 255, 0.5);
 }
 
 .btn-mulai-tiup.hidden-btn {
@@ -2021,8 +2054,8 @@ body {
 }
 
 @keyframes tiupBtnGlow {
-    0%, 100% { box-shadow: 0 4px 20px rgba(108, 92, 231, 0.4); }
-    50% { box-shadow: 0 4px 30px rgba(108, 92, 231, 0.7), 0 0 40px rgba(255, 107, 129, 0.2); }
+    0%, 100% { box-shadow: 0 4px 20px rgba(160, 104, 64, 0.45), 0 0 20px rgba(255, 255, 255, 0.3); }
+    50% { box-shadow: 0 6px 30px rgba(111, 67, 42, 0.65), 0 0 35px rgba(223, 178, 136, 0.5); }
 }
 
 /* =========================================
@@ -2137,11 +2170,12 @@ body {
     }
 }
 
-/* Pesan akhir yang spesial */
+/* Pesan akhir yang spesial - Warna Font Cokelat */
 .candle-message.final-msg {
-    font-size: 1.3rem;
-    color: #ffffff;
-    text-shadow: 0 0 20px rgba(255, 182, 193, 0.6), 0 0 40px rgba(255, 182, 193, 0.3);
+    font-size: 1.35rem;
+    color: #4a2810;
+    font-weight: 600;
+    text-shadow: 0 0 15px rgba(255, 238, 220, 0.9), 0 1px 2px rgba(255, 255, 255, 0.95);
     max-width: 320px;
     line-height: 1.6;
 }
@@ -2175,22 +2209,24 @@ body {
     padding: 10px 20px;
     font-family: 'Outfit', sans-serif;
     font-size: 0.9rem;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.8);
-    background: rgba(255, 255, 255, 0.08);
+    font-weight: 500;
+    color: #543310;
+    background: rgba(255, 255, 255, 0.88);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(188, 140, 100, 0.45);
+    box-shadow: 0 4px 15px rgba(110, 65, 30, 0.15);
     border-radius: 30px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .btn-back-candle:hover {
-    background: rgba(255, 255, 255, 0.15);
-    color: #fff;
+    background: rgba(255, 255, 255, 0.96);
+    color: #8b5a2b;
     transform: translateX(-50%) scale(1.05);
-    border-color: rgba(255, 182, 193, 0.4);
+    border-color: rgba(188, 140, 100, 0.8);
+    box-shadow: 0 0 15px rgba(188, 140, 100, 0.35);
 }
 
 /* =========================================
@@ -2198,8 +2234,9 @@ body {
 ========================================= */
 .tap-hint {
     font-family: 'Outfit', sans-serif;
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #543310;
     margin-top: 15px;
     margin-bottom: 60px;
     min-height: 20px;
@@ -2223,7 +2260,8 @@ body {
 .hold-progress-bar {
     width: 200px;
     height: 6px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(188, 138, 98, 0.4);
     border-radius: 3px;
     margin-top: 20px;
     overflow: hidden;
@@ -2238,10 +2276,10 @@ body {
 .hold-progress-fill {
     width: 0%;
     height: 100%;
-    background: linear-gradient(90deg, #ff7eb3, #ff758c, #ffd700);
+    background: linear-gradient(90deg, #ffffff, #d4a373, #7b441f);
     border-radius: 3px;
     transition: width 0.05s linear;
-    box-shadow: 0 0 8px rgba(255, 126, 179, 0.6);
+    box-shadow: 0 0 10px rgba(188, 115, 55, 0.75);
 }
 
 /* Visual feedback saat menekan kue */

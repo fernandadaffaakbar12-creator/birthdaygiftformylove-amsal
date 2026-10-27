@@ -450,7 +450,7 @@
         const pinPopupClose = document.getElementById('pin-popup-close');
 
         // DEFAULT PIN: Silakan ubah angka ini jika ingin PIN lain
-        const SECRET_PIN = "2708";
+        const SECRET_PIN = "1401";
 
         let pinAttempt = 0;
         let popupTimeout = null;
@@ -706,6 +706,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 else if (this.classList.contains('planet-card')) {
                     modalImg.src = this.querySelector('img').src;
                     modalImg.style.aspectRatio = "3 / 4";
+                    modalImg.style.objectFit = "cover";
 
                     const customCaption = this.getAttribute('data-caption');
                     const teksCaption = customCaption ? customCaption : this.querySelector('.planet-caption').innerText;
@@ -715,6 +716,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 else if (this.classList.contains('polaroid')) {
                     modalImg.src = this.querySelector('img').src;
                     modalImg.style.aspectRatio = "3 / 4";
+                    modalImg.style.objectFit = "cover";
                     const polaroidCaption = this.querySelector('.caption');
                     if (modalCaption && polaroidCaption) {
                         modalCaption.innerText = polaroidCaption.innerText;
@@ -724,6 +726,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 else {
                     modalImg.src = this.src;
                     modalImg.style.aspectRatio = "9 / 16";
+                    modalImg.style.objectFit = "cover";
                 }
 
                 modal.classList.add('show-modal');
